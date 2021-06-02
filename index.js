@@ -21,6 +21,14 @@ var books = [
   }
 ];
 
+const merge = (arr, type) {
+
+}
+
+const bubble = (array, type) => {
+
+}
+
 var sortBooksByID = function(arr) {
   // sort books
 
