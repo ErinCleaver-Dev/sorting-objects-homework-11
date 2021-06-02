@@ -21,7 +21,12 @@ var books = [
   }
 ];
 
-const merge = (arr, type) => {
+const merge = (array, type) => {
+  middle = Math.ceil(array.length/2) 
+  right = array.slice(middle + 1)
+
+  
+
 
 }
 
