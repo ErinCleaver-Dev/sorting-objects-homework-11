@@ -21,7 +21,7 @@ var books = [
   }
 ];
 
-const merge = (arr, type) {
+const merge = (arr, type) => {
 
 }
 
