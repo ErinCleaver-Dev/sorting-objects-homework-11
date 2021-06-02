@@ -25,12 +25,12 @@ const merge = (array, type) => {
   middle = Math.ceil(array.length/2) 
   right = array.slice(middle + 1)
 
+  console.log(right)
   
-
-
 }
 
 const bubble = (array, type) => {
+  
 
 }
 
@@ -46,3 +46,4 @@ var sortBooks = function(arr, type) {
   return arr;
 };
 
+merge(console.log(books))
