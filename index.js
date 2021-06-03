@@ -23,9 +23,10 @@ var books = [
 
 const merge = (leftSide, rightSide, type) => {
   results = [];
-  console.log(leftSide)
+  let i = 0;
+  let j = 0;
   while (leftSide.length && rightSide.length) {
-    if(leftSide[0][type] >= rightSide[0][type]) {
+    if(leftSide[0][type] <= rightSide[0][type]) {
       results.push(leftSide.shift())
     } else {
       results.push(rightSide.shift())
@@ -33,8 +34,9 @@ const merge = (leftSide, rightSide, type) => {
   }
   results = [...results, ...leftSide]
   results = [...results, ...rightSide]
+  
 
-  return results;
+  return results = [...new Set(results)];
 }
 
 const mergeSort = (array, type) => {
