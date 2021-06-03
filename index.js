@@ -23,8 +23,7 @@ var books = [
 
 const merge = (leftSide, rightSide, type) => {
   results = [];
-  let i = 0;
-  let j = 0;
+
   while (leftSide.length && rightSide.length) {
     if(leftSide[0][type] <= rightSide[0][type]) {
       results.push(leftSide.shift())
