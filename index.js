@@ -55,10 +55,7 @@ const mergeSort = (array, type) => {
       type)
 }
 
-const bubble = (array, type) => {
-    
 
-}
 
 var sortBooksByID = function(arr) {
   // sort books
