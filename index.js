@@ -23,29 +23,33 @@ var books = [
 
 const merge = (leftSide, rightSide, type) => {
   results = [];
-  console.log(type)
+  
   while (leftSide.length && rightSide.length) {
-    if(left[0][type] <= right[0][type]) {
-      console.log(left[0][type])
-      results.push(left.shift(0))
+    if(leftSide[0][type] <= rightSide[0][type]) {
+      results.push(leftSide.shift(0))
       
     } else {
-      results.push(right.shift(0))
+      results.push(rightSide.shift(0))
     }
   }
-
+  console.log(results)
   return results
 }
 
 const mergeSort = (array, type) => {
   middle = Math.ceil(array.length/2) 
-  console.log(type)
   if(array.length == 1) {
     return array
   }
 
 
-  return merge(mergeSort(array.slice(0, middle), type), mergeSort(array.slice(middle), type))
+  return merge(
+    mergeSort(
+      array.slice(0, middle), 
+      type), 
+      mergeSort(array.slice(middle), 
+      type), 
+      type)
 }
 
 const bubble = (array, type) => {
@@ -65,4 +69,4 @@ var sortBooks = function(arr, type) {
   return arr;
 };
 
-mergeSort(books, "libraryID")
+console.log(mergeSort(books, "libraryID"))
