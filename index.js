@@ -27,7 +27,7 @@ const merge = (leftSide, rightSide, type) => {
   let j = 0;
   console.log(leftSide)
   while (leftSide.length && rightSide.length) {
-    if(leftSide[0][type] <= rightSide[0][type]) {
+    if(leftSide[0][type] < rightSide[0][type]) {
       results.push(leftSide.shift())
       i++
     } else {
