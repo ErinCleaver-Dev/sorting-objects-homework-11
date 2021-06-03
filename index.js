@@ -23,17 +23,18 @@ var books = [
 
 const merge = (leftSide, rightSide, type) => {
   results = [];
-  
+  let i = 0;
+  let j = 0;
   while (leftSide.length && rightSide.length) {
     if(leftSide[0][type] <= rightSide[0][type]) {
-      results.push(leftSide.shift(0))
-      
+      results.push(leftSide.shift())
+      i++
     } else {
-      results.push(rightSide.shift(0))
+      results.push(rightSide.shift())
+      j++
     }
   }
-  console.log(results)
-  return results
+  return results.concat(leftSide.slice(i)).concat(rightSide.slice(j));
 }
 
 const mergeSort = (array, type) => {
@@ -59,14 +60,16 @@ const bubble = (array, type) => {
 
 var sortBooksByID = function(arr) {
   // sort books
-
-  return arr;
+  
+  return mergeSort(arr, "libraryID");
 };
 
 var sortBooks = function(arr, type) {
   // sort books
 
-  return arr;
+  return mergeSort(arr, type);
 };
 
-console.log(mergeSort(books, "libraryID"))
+console.log(sortBooksByID(books))
+console.log(sortBooks(books, "author"))
+
