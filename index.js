@@ -31,8 +31,7 @@ const merge = (leftSide, rightSide, type) => {
       results.push(rightSide.shift())
     }
   }
-  results = [...results, ...leftSide]
-  results = [...results, ...rightSide]
+  results = [...results, ...leftSide,...rightSide]
   
 
   return results = [...new Set(results)];
